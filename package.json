@@ -1,0 +1,27 @@
+{
+  "name": "ia",
+  "version": "1.0.0",
+  "description": "Computer Science IA",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+  },
+  "author": "Student",
+  "license": "ISC",
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.5",
+    "@electron-forge/maker-deb": "^6.0.5",
+    "@electron-forge/maker-rpm": "^6.0.5",
+    "@electron-forge/maker-squirrel": "^6.0.5",
+    "@electron-forge/maker-zip": "^6.0.5",
+    "electron": "^22.1.0",
+    "jspdf": "^2.5.1",
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.19.2/xlsx-0.19.2.tgz"
+  },
+  "dependencies": {
+    "electron-context-menu": "^3.6.1",
+    "electron-squirrel-startup": "^1.0.0"
+  }
+}

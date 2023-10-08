@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Quick Graph</title>
+</head>
+
+<body>
+    <canvas id="chartCanvas" class="hidden" width="800" height="600"></canvas>
+    <canvas id="chartCanvas2" class="hidden" width="800" height="600"></canvas>
+    <div id="inputPage">
+        <div class="sectionHeader">
+            <button class="dummyBackward">
+                << </button>
+                    <p class="sectionHeaderText">1 - Import Data From File</p>
+                    <button class="navForward" id="inputForward"> >> </button>
+        </div>
+        <div class="grid">
+            <div class="inputFileBox">
+                <p class="leftText" id="fileLabel">Use file:</p>
+                <input type="file" class="fileInput" id="fileInput">
+                <label for="fileInput" class="fileLabel" id="fileInputLabel">Browse...</label>
+            </div>
+            <br />
+            <div class="pluginLabelBox">
+                <p class="leftText">Use plugin:</p> <select id="inputSelect" class="pluginSelect">
+                    <option value="" disabled selected hidden>Choose a plugin</option>
+                </select>
+            </div>
+            <br />
+            <div class="pluginOptionsBox">
+                <p class="leftText">Plugin options:</p>
+                <br />
+                <div id="inputOptionsContainer" class="innerGrid"></div>
+            </div>
+        </div>
+        <div class="finalButtonBox">
+            <p id="importReport" style="margin-bottom: 10px"></p>
+            <button id="importButton" class="finalButton">Import</button>
+        </div>
+    </div>
+    </div>
+    <div id="graphPage">
+        <div class="sectionHeader">
+            <button class="navBackward" id="graphBackward">
+                << </button>
+                    <p class="sectionHeaderText">2 - Select Chart Type</p>
+                    <button class="navForward" id="graphForward"> >> </button>
+        </div>
+        <br />
+        <div class="grid">
+            <div class="pluginLabelBox">
+                <p class="leftText">Use plugin:</p> <select id="chartSelect" class="pluginSelect">
+                    <option value="" disabled selected hidden>Choose a plugin</option>
+                </select>
+            </div>
+            <br />
+            <div class="pluginOptionsBox">
+                <p class="leftText">Plugin options:</p>
+                <br />
+                <div id="chartOptionsContainer" class="innerGrid"></div>
+            </div>
+        </div>
+        <div class="finalButtonBox">
+            <p id="chartReport" style="margin-bottom: 10px"></p>
+            <button id="chartButton" class="finalButton">Generate Chart</button>
+        </div>
+    </div>
+    </div>
+    <div id="outputPage">
+        <div class="sectionHeader">
+            <button class="navBackward" id="outputBackward">
+                << </button>
+                    <p class="sectionHeaderText">3 - Export Graph</p>
+                    <button class="dummyForward"> >> </button>
+        </div>
+        <br />
+        <div class="grid">
+            <div class="preview">
+                <p>Chart preview:</p>
+                <img id="chartPreview" width="200" height="150"/>
+            </div>
+            <div class="pluginLabelBox">
+                <p class="leftText">Use plugin:</p> <select id="outputSelect" class="pluginSelect">
+                    <option value="" disabled selected hidden>Choose a plugin</option>
+                </select>
+            </div>
+            <br />
+            <div class="pluginOptionsBox">
+                <p class="leftText">Plugin options:</p>
+                <br />
+                <div id="outputOptionsContainer" class="innerGrid"></div>
+            </div>
+        </div>
+        <div class="finalButtonBox">
+            <p id="outputReport" style="margin-bottom: 10px"></p>
+            <button id="outputButton" class="finalButton">Export Chart</button>
+        </div>
+    </div>
+</body>
+
+</html>
